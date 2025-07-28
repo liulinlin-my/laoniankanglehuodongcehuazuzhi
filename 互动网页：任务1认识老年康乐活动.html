@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>老年康乐活动策划组织 - 互动课件</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4361ee',
+                        secondary: '#3f37c9',
+                        accent: '#4895ef',
+                        light: '#f8f9fa',
+                        dark: '#212529'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .transition-custom {
+                transition: all 0.3s ease;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+    <!-- 导航栏 -->
+    <nav class="bg-primary shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <h1 class="text-white text-xl md:text-2xl font-bold">
+                    <i class="fa fa-heartbeat mr-2"></i>老年康乐活动策划组织
+                </h1>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#intro" class="text-white hover:text-gray-200 transition-custom">情景导入</a>
+                    <a href="#knowledge" class="text-white hover:text-gray-200 transition-custom">知识讲解</a>
+                    <a href="#cases" class="text-white hover:text-gray-200 transition-custom">案例分析</a>
+                    <a href="#quiz" class="text-white hover:text-gray-200 transition-custom">在线测试</a>
+                </div>
+                <button class="md:hidden text-white text-xl" id="menuToggle">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobileMenu" class="hidden md:hidden bg-primary/95">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="#intro" class="text-white hover:text-gray-200 py-2 transition-custom">情景导入</a>
+                <a href="#knowledge" class="text-white hover:text-gray-200 py-2 transition-custom">知识讲解</a>
+                <a href="#cases" class="text-white hover:text-gray-200 py-2 transition-custom">案例分析</a>
+                <a href="#quiz" class="text-white hover:text-gray-200 py-2 transition-custom">在线测试</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="container mx-auto px-4 pt-24 pb-16">
+        <!-- 页面标题 -->
+        <div class="text-center mb-12">
+            <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-primary mb-4">模块一：初探老年康乐活动</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">任务1：认识老年康乐活动</p>
+            <div class="w-24 h-1 bg-accent mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <!-- 学习目标 -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-12">
+            <h3 class="text-xl font-bold text-primary mb-4 flex items-center">
+                <i class="fa fa-bullseye mr-2"></i>学习目标
+            </h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="border-l-4 border-primary pl-4">
+                    <h4 class="font-semibold mb-2">知识目标</h4>
+                    <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                        <li>掌握老年康乐活动的基本概念和核心特征</li>
+                        <li>熟记老年康乐活动的基本分类及具体案例</li>
+                        <li>了解老年康乐活动的实施场所和时间特点</li>
+                    </ul>
+                </div>
+                <div class="border-l-4 border-accent pl-4">
+                    <h4 class="font-semibold mb-2">能力目标</h4>
+                    <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                        <li>能根据不同场景列举对应的康乐活动</li>
+                        <li>能区分不同类型的康乐活动</li>
+                    </ul>
+                </div>
+                <div class="border-l-4 border-secondary pl-4">
+                    <h4 class="font-semibold mb-2">素质目标</h4>
+                    <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                        <li>认识到老年康乐活动的重要性</li>
+                        <li>培养对老年人需求的敏感度</li>
+                        <li>树立"以老人为中心"的服务意识</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 情景导入 -->
+        <section id="intro" class="mb-16 scroll-mt-24">
+            <div class="bg-gradient-to-r from-primary/10 to-accent/10 rounded-xl p-6 md:p-8 shadow-md">
+                <h3 class="text-2xl font-bold text-primary mb-6 flex items-center">
+                    <i class="fa fa-book mr-3"></i>情景导入
+                </h3>
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <div class="flex flex-col md:flex-row gap-6 items-center">
+                        <div class="md:w-2/3">
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                张奶奶刚住进养老机构时，每天总是坐在窗边发呆，不爱说话。护理员发现她喜欢老歌，就邀请她参加每周三的"怀旧金曲会"。
+                            </p>
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                第一次参加时，张奶奶只是默默听着，后来跟着大家一起哼唱，慢慢开始和旁边的李爷爷聊起年轻时听歌的往事。现在，张奶奶不仅每次都积极参加活动，还主动教大家唱她拿手的老歌，脸上的笑容越来越多。
+                            </p>
+                            <p class="text-gray-700 leading-relaxed font-medium">
+                                这个例子告诉我们，老年康乐活动能给老年人的生活带来很大变化。那么，什么是老年康乐活动？它有哪些形式和意义呢？接下来，我们就一起走进老年康乐活动的世界。
+                            </p>
+                        </div>
+                        <div class="md:w-1/3">
+                            <img src="https://picsum.photos/id/26/600/400" alt="老年人参加康乐活动" class="rounded-lg shadow-md w-full h-auto object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 知识讲解 -->
+        <section id="knowledge" class="mb-16 scroll-mt-24">
+            <h3 class="text-2xl font-bold text-primary mb-6 flex items-center">
+                <i class="fa fa-graduation-cap mr-3"></i>知识讲解
+            </h3>
+
+            <!-- 概念部分 -->
+            <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                <h4 class="text-xl font-semibold text-secondary mb-4">一、老年康乐活动的概念</h4>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    随着人口老龄化加剧，养老机构、医养结合机构和社区对老年人的照护越来越重视。在机构、社区或家庭中，为了让老年人"愉快地生活"而开展的体操、游戏、唱歌、手工等各类活动，统称为<span class="font-semibold text-primary">老年康乐活动</span>。其核心目的是帮助老年人在日常生活中找到乐趣和意义，享受生活的美好。
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                    具备老年康乐活动专业知识，能为老年人策划、组织这类活动的人，被称为"老年康乐活动工作者"，包括养老机构的护理员、社区社工、志愿者以及老人家属等。对这些工作者来说，真诚的笑容、耐心的态度是最基本的要求——一个温暖的微笑能让老人感到安心，愿意主动参与活动；时刻站在老人的角度考虑问题，才能真正理解他们的需求。
+                </p>
+            </div>
+
+            <!-- 特征部分 -->
+            <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                <h4 class="text-xl font-semibold text-secondary mb-4">二、老年康乐活动的特征</h4>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    老年康乐活动不是简单的"空闲时的娱乐"，它有三个核心特征：
+                </p>
+                <div class="grid md:grid-cols-3 gap-4 mb-4">
+                    <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-custom">
+                        <div class="flex items-center mb-2">
+                            <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-2">1</div>
+                            <h5 class="font-medium">以"找乐趣"为核心</h5>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            活动的目的是让老年人从生活中感受到快乐，而不是完成任务。比如，组织老人画画不是为了培养画家，而是让他们在涂色的过程中放松心情。
+                        </p>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-custom">
+                        <div class="flex items-center mb-2">
+                            <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-2">2</div>
+                            <h5 class="font-medium">融入日常生活</h5>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            重点是在吃饭、洗澡、散步等普通生活环节中加入乐趣，让每一天都有意义。比如，老人散步时聊聊过去的趣事，就比单纯走路更有幸福感。
+                        </p>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-custom">
+                        <div class="flex items-center mb-2">
+                            <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-2">3</div>
+                            <h5 class="font-medium">助力身心健康</h5>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            优质的康乐活动能帮助老年人恢复身体功能、提高自立能力，进而提升生活质量（QOL）和日常活动能力（ADL）。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 分类部分 - 交互式表格 -->
+            <div class="bg-white rounded-xl shadow-md p-6 mb-8 border-t-4 border-accent">
+                <h4 class="text-xl font-semibold text-secondary mb-4">三、老年康乐活动的分类</h4>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    老年康乐活动形式多样，可从不同角度分类，最常见的有以下两种：
+                </p>
+
+                <!-- 按活动形式分类 -->
+                <div class="mb-10">
+                    <h5 class="text-lg font-medium text-primary mb-4">（一）基本类型（按活动形式）</h5>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full border-collapse">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="border border-gray-300 px-4 py-3 text-left">类型</th>
+                                    <th class="border border-gray-300 px-4 py-3 text-left">定义</th>
+                                    <th class="border border-gray-300 px-4 py-3 text-left">具体案例</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-gray-50 cursor-pointer activity-row" data-type="collective">
+                                    <td class="border border-gray-300 px-4 py-3 font-medium">集体康乐活动</td>
+                                    <td class="border border-gray-300 px-4 py-3">以团体形式开展，适合多人互动</td>
+                                    <td class="border border-gray-300 px-4 py-3">点击查看案例</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 cursor-pointer activity-row" data-type="individual">
+                                    <td class="border border-gray-300 px-4 py-3 font-medium">个别康乐活动</td>
+                                    <td class="border border-gray-300 px-4 py-3">针对老人的个体兴趣和身体状况设计，适合单独或小范围参与</td>
+                                    <td class="border border-gray-300 px-4 py-3">点击查看案例</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50 cursor-pointer activity-row" data-type="daily">
+                                    <td class="border border-gray-300 px-4 py-3 font-medium">基本生活康乐活动</td>
+                                    <td class="border border-gray-300 px-4 py-3">融入吃饭、洗澡等日常起居，让普通生活环节更有乐趣</td>
+                                    <td class="border border-gray-300 px-4 py-3">点击查看案例</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 案例弹窗 -->
+                    <div id="activityModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+                        <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+                            <div class="p-6 border-b flex justify-between items-center">
+                                <h6 class="text-lg font-semibold text-primary" id="modalTitle">集体康乐活动案例</h6>
+                                <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+                                    <i class="fa fa-times text-xl"></i>
+                                </button>
+                            </div>
+                            <div class="p-6" id="modalContent">
+                                <!-- 案例内容将通过JS动态填充 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 按个体体验与功能分类 -->
+                <div>
+                    <h5 class="text-lg font-medium text-primary mb-4">（二）按"个体体验与功能"分类</h5>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="border border-gray-200 rounded-lg p-5 hover:shadow-lg transition-custom cursor-pointer" data-category="physical">
+                            <div class="flex items-start mb-3">
+                                <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                    <i class="fa fa-walking text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h6 class="font-medium text-secondary">1. 身体活动康乐活动</h6>
+                                    <p class="text-gray-600 text-sm mt-1">以促进身体运动、增强体能为核心，结合季节特点设计</p>
+                                </div>
+                            </div>
+                            <div class="pl-10 text-gray-600 text-sm hidden category-details" id="physical-details">
+                                <p>如春季的太极拳、户外健步走，夏季的游泳，秋季的登山，冬季的室内体操等。这类活动能锻炼肢体灵活度、提升平衡能力，适合不同身体状况的老年人。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg p-5 hover:shadow-lg transition-custom cursor-pointer" data-category="sensory">
+                            <div class="flex items-start mb-3">
+                                <div class="bg-purple-100 p-2 rounded-full mr-3">
+                                    <i class="fa fa-eye text-purple-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h6 class="font-medium text-secondary">2. 多感官体验康乐活动</h6>
+                                    <p class="text-gray-600 text-sm mt-1">通过听觉、视觉、嗅觉、味觉、触觉等多种感官刺激，丰富感知体验</p>
+                                </div>
+                            </div>
+                            <div class="pl-10 text-gray-600 text-sm hidden category-details" id="sensory-details">
+                                <p>如聆听自然声音、欣赏绘画、体验食物香气、动手做手工等。例如夏季的"音乐与声音感知活动""香气与味觉体验活动"，能唤醒老年人对生活的细腻感受。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg p-5 hover:shadow-lg transition-custom cursor-pointer" data-category="cognitive">
+                            <div class="flex items-start mb-3">
+                                <div class="bg-green-100 p-2 rounded-full mr-3">
+                                    <i class="fa fa-brain text-green-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h6 class="font-medium text-secondary">3. 认知训练康乐活动</h6>
+                                    <p class="text-gray-600 text-sm mt-1">以锻炼大脑功能、提升认知能力为目标，包括记忆训练、思维联想等</p>
+                                </div>
+                            </div>
+                            <div class="pl-10 text-gray-600 text-sm hidden category-details" id="cognitive-details">
+                                <p>如通过回忆往事强化长时记忆，通过猜谜锻炼逻辑思维，尤其适合预防认知衰退。秋季的"长时记忆训练""空间感知培养"等活动均属此类。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg p-5 hover:shadow-lg transition-custom cursor-pointer" data-category="social">
+                            <div class="flex items-start mb-3">
+                                <div class="bg-red-100 p-2 rounded-full mr-3">
+                                    <i class="fa fa-handshake-o text-red-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h6 class="font-medium text-secondary">4. 社交情感康乐活动</h6>
+                                    <p class="text-gray-600 text-sm mt-1">聚焦人际关系与情感表达，满足老年人的社交需求，缓解孤独感</p>
+                                </div>
+                            </div>
+                            <div class="pl-10 text-gray-600 text-sm hidden category-details" id="social-details">
+                                <p>如冬季的"亲情互动温馨活动""团体游戏合作活动"，能增强老年人的情感联结与归属感。节日主题活动、家庭探访日等也属于此类。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 实施场所与时间 -->
+            <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                <h4 class="text-xl font-semibold text-secondary mb-4">四、老年康乐活动的实施场所与时间</h4>
+                
+                <div class="mb-6">
+                    <h5 class="text-lg font-medium text-primary mb-3 flex items-center">
+                        <i class="fa fa-map-marker mr-2 text-accent"></i>实施场所
+                    </h5>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        只要是老年人生活的地方都能开展！过去主要在养老机构，现在社区广场、老人家里、公园等都成了常见场所。
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="bg-gray-50 p-4 rounded-lg text-center">
+                            <i class="fa fa-home text-3xl text-primary mb-2"></i>
+                            <p class="text-sm">家庭</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg text-center">
+                            <i class="fa fa-building text-3xl text-primary mb-2"></i>
+                            <p class="text-sm">养老机构</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg text-center">
+                            <i class="fa fa-users text-3xl text-primary mb-2"></i>
+                            <p class="text-sm">社区</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg text-center">
+                            <i class="fa fa-tree text-3xl text-primary mb-2"></i>
+                            <p class="text-sm">公园/户外</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="text-lg font-medium text-primary mb-3 flex items-center">
+                        <i class="fa fa-clock-o mr-2 text-accent"></i>实施时间
+                    </h5>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        老年人的一天可分为"基本生活时间"（吃饭、洗澡、睡觉等）、"社会生活时间"（如退休前的工作）和"自由时间"（可自主安排的时间）。随着年龄增长，"社会生活时间"减少，"自由时间"增多。
+                    </p>
+                    <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                        <div class="flex items-center mb-2">
+                            <div class="w-6 h-6 bg-primary text-white rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                                <i class="fa fa-history text-xs"></i>
+                            </div>
+                            <p class="font-medium">传统时间安排</p>
+                        </div>
+                        <p class="text-gray-600 text-sm pl-8">多在"自由时间"开展，比如下午组织唱歌、下棋等集中性活动。</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <div class="flex items-center mb-2">
+                            <div class="w-6 h-6 bg-accent text-white rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                                <i class="fa fa-lightbulb-o text-xs"></i>
+                            </div>
+                            <p class="font-medium">现代创新安排</p>
+                        </div>
+                        <p class="text-gray-600 text-sm pl-8">更注重在"基本生活时间"里加入乐趣，比如早餐时听收音机里的评书，睡前和护理员聊聊家常，让每一刻都不枯燥。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 案例分析 -->
+        <section id="cases" class="mb-16 scroll-mt-24">
+            <h3 class="text-2xl font-bold text-primary mb-6 flex items-center">
+                <i class="fa fa-file-text-o mr-3"></i>案例分析
+            </h3>
+
+            <!-- 案例1 -->
+            <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                <div class="flex items-center mb-4">
+                    <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                        <span class="font-bold">01</span>
+                    </div>
+                    <h4 class="text-xl font-semibold text-secondary">养老机构的"四季身体活动计划"</h4>
+                </div>
+                
+                <div class="mb-4 pl-13">
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        某养老机构根据季节变化和老人身体状况，设计了系列身体活动计划：
+                    </p>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
+                        <li><span class="font-medium">春季</span>：组织户外健步赏景，每周2次，每次30分钟，配备轮椅和随行护理人员</li>
+                        <li><span class="font-medium">夏季</span>：开展室内瑜伽和太极扇，在早晨凉爽时段进行，避免高温</li>
+                        <li><span class="font-medium">秋季</span>：安排轻量登山和采摘活动，选择坡度平缓的路线</li>
+                        <li><span class="font-medium">冬季</span>：进行集体拍手操和室内球类活动，保持室内温暖通风</li>
+                    </ul>
+                    <p class="text-gray-700 leading-relaxed">
+                        活动前会根据老人的血压、关节状况调整强度，为不同能力的老人提供备选方案，确保安全。每次活动结束后，工作人员会记录老人的参与情况和反馈。
+                    </p>
+                </div>
+            </div>
+
+            <!-- 案例2 -->
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <div class="flex items-center mb-4">
+                    <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                        <span class="font-bold">02</span>
+                    </div>
+                    <h4 class="text-xl font-semibold text-secondary">社区的"中秋亲情茶话会"</h4>
+                </div>
+                
+                <div class="mb-4 pl-13">
+                    <p class="text-gray-700 leading-relaxed mb-3">
+                        中秋佳节，某社区组织了一场别开生面的亲情茶话会，活动设计如下：
+                    </p>
+                    
+                    <div class="grid md:grid-cols-3 gap-4 mb-4">
+                        <div class="border border-gray-200 rounded-lg p-3">
+                            <h6 class="font-medium text-center mb-2">第一环节</h6>
+                            <p class="text-gray-700 text-sm">老人分享年轻时的中秋记忆（认知训练），家属负责记录和整理</p>
+                        </div>
+                        <div class="border border-gray-200 rounded-lg p-3">
+                            <h6 class="font-medium text-center mb-2">第二环节</h6>
+                            <p class="text-gray-700 text-sm">家属与老人共同制作简易月饼（多感官体验），提供不同难度的操作选项</p>
+                        </div>
+                        <div class="border border-gray-200 rounded-lg p-3">
+                            <h6 class="font-medium text-center mb-2">第三环节</h6>
+                            <p class="text-gray-700 text-sm">集体合唱团圆歌曲（社交情感），歌词采用大字版便于老人查看</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-700 leading-relaxed">
+                        活动特别考虑了独居老人，安排社区志愿者作为"临时家人"参与，确保每位老人都能感受到节日的温暖。活动结束后，为行动不便的老人提供上门送月饼服务。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+     <!-- 在线测试 -->
+<section id="quiz" class="mb-16 scroll-mt-24">
+    <h3 class="text-2xl font-bold text-primary mb-6 flex items-center">
+        <i class="fa fa-check-square-o mr-3"></i>在线测试
+    </h3>
+    
+    <div class="bg-white rounded-xl shadow-md p-6">
+        <p class="text-gray-700 mb-6">请完成以下测试题，检验对老年康乐活动知识的掌握程度。选择答案后将立即显示结果和解析。</p>
+        
+        <div class="space-y-6" id="quizContainer">
+            <!-- 题目1 -->
+            <div class="border-b border-gray-200 pb-6">
+                <div class="flex items-start mb-3">
+                    <span class="font-medium mr-2">1.</span>
+                    <p class="text-gray-800">以下哪项不属于老年康乐活动的核心特征？</p>
+                </div>
+                <div class="pl-6 space-y-2">
+                    <label class="flex items-center quiz-option" data-question="q1" data-answer="A">
+                        <input type="radio" name="q1" value="A" class="mr-2">
+                        <span>A. 以"找乐趣"为核心</span>
+                    </label>
+                    <label class="flex items-center quiz-option" data-question="q1" data-answer="B">
+                        <input type="radio" name="q1" value="B" class="mr-2">
+                        <span>B. 必须有专业人员组织</span>
+                    </label>
+                    <label class="flex items-center quiz-option" data-question="q1" data-answer="C">
+                        <input type="radio" name="q1" value="C" class="mr-2">
+                        <span>C. 融入日常生活</span>
+                    </label>
+                    <label class="flex items-center quiz-option" data-question="q1" data-answer="D">
+                        <input type="radio" name="q1" value="D" class="mr-2">
+                        <span>D. 助力身心健康</span>
+                    </label>
+                </div>
+                <div class="quiz-explanation hidden mt-3 pl-6 p-3 rounded-lg">
+                    <p class="explanation-text"></p>
+                </div>
+            </div>
+            
+            <!-- 题目2 -->
+            <div class="border-b border-gray-200 pb-6">
+                <div class="flex items-start mb-3">
+                    <span class="font-medium mr-2">2.</span>
+                    <p class="text-gray-800">社区组织老人一起跳广场舞，这种活动属于以下哪类？</p>
+                </div>
+                <div class="pl-6 space-y-2">
+                    <label class="flex items-center quiz-option" data-question="q2" data-answer="A">
+                        <input type="radio" name="q2" value="A" class="mr-2">
+                        <span>A. 个别康乐活动</span>
+                    </label>
+                    <label class="flex items-center quiz-option" data-question="q2" data-answer="B">
+                        <input type="radio" name="q2" value="B" class="mr-2">
+                        <span>B. 集体康乐活动</span>
+                    </label>
+                    <label class="flex items-center quiz-option" data-question="q2" data-answer="C">
+                        <input type="radio" name="q2" value="C" class="mr-2">
+                        <span>C. 基本生活康乐活动</span>
+                    </label>
+                    <label class="flex items-center quiz-option" data-question="q2" data-answer="D">
+                        <input type="radio" name="q2" value="D" class="mr-2">
+                        <span>D. 认知训练康乐活动</span>
+                    </label>
+                </div>
+                <div class="quiz-explanation hidden mt-3 pl-6 p-3 rounded-lg">
+                    <p class="explanation-text"></p>
+                </div>
+            </div>
+            
+            <!-- 题目3 -->
+            <div class="border-b border-gray-200 pb-6">
+                <div class="flex items-start mb-3">
+                    <span class="font-medium mr-2">3.</span>
+                    <p class="text-gray-800">以下哪项活动最适合归类为"多感官体验康乐活动"？</p>
+                </div>
+                <div class="pl-6 space-y-2">
+                    <label class="flex items-center quiz-option" data-question="q3" data-answer="A">
+                        <input type="radio" name="q3" value="A" class="mr-2">
+                        <span>A. 晨间太极拳练习</span>
+                    </label>
+                    <label class="flex items-center quiz-option" data-question="q3" data-answer="B">
+                        <input type="radio" name="q3" value="B" class="mr-2">
+                        <span>B. 猜灯谜活动</span>
+                    </label>
+                    <label class="flex items-center quiz-option" data-question="q3" data-answer="C">
+                        <input type="radio" name="q3" value="C" class="mr-2">
+                        <span>C. 制作并品尝传统点心</span>
+                    </label>
+                    <label class="flex items-center quiz-option" data-question="q3" data-answer="D">
+                        <input type="radio" name="q3" value="D" class="mr-2">
+                        <span>D. 健康知识讲座</span>
+                    </label>
+                </div>
+                <div class="quiz-explanation hidden mt-3 pl-6 p-3 rounded-lg">
+                    <p class="explanation-text"></p>
+                </div>
+            </div>
+            
+            <!-- 题目4 -->
+            <div class="border-b border-gray-200 pb-6">
+                <div class="flex items-start mb-3">
+                    <span class="font-medium mr-2">4.</span>
+                    <p class="text-gray-800">在老年康乐活动策划中，以下哪项是首要考虑的因素？</p>
+                </div>
+                <div class="pl-6 space-y-2">
+                    <label class="flex items-center quiz-option" data-question="q4" data-answer="A">
+                        <input type="radio" name="q4" value="A" class="mr-2">
+                        <span>A. 活动成本预算</span>
+                    </label>
+                    <label class="flex items-center quiz-option" data-question="q4" data-answer="B">
+                        <input type="radio" name="q4" value="B" class="mr-2">
+                        <span>B. 老人的需求和能力</span>
+                    </label>
+                    <label class="flex items-center quiz-option" data-question="q4" data-answer="C">
+                        <input type="radio" name="q4" value="C" class="mr-2">
+                        <span>C. 活动的创新性</span>
+                    </label>
+                    <label class="flex items-center quiz-option" data-question="q4" data-answer="D">
+                        <input type="radio" name="q4" value="D" class="mr-2">
+                        <span>D. 参与人数多少</span>
+                    </label>
+                </div>
+                <div class="quiz-explanation hidden mt-3 pl-6 p-3 rounded-lg">
+                    <p class="explanation-text"></p>
+                </div>
+            </div>
+            
+            <!-- 题目5 -->
+            <div class="pb-6">
+                <div class="flex items-start mb-3">
+                    <span class="font-medium mr-2">5.</span>
+                    <p class="text-gray-800">以下关于老年康乐活动实施时间的说法，正确的是？</p>
+                </div>
+                <div class="pl-6 space-y-2">
+                    <label class="flex items-center quiz-option" data-question="q5" data-answer="A">
+                        <input type="radio" name="q5" value="A" class="mr-2">
+                        <span>A. 只能在白天进行，晚上不宜开展</span>
+                    </label>
+                    <label class="flex items-center quiz-option" data-question="q5" data-answer="B">
+                        <input type="radio" name="q5" value="B" class="mr-2">
+                        <span>B. 应主要利用老人的"自由时间"，避免干扰日常生活</span>
+                    </label>
+                    <label class="flex items-center quiz-option" data-question="q5" data-answer="C">
+                        <input type="radio" name="q5" value="C" class="mr-2">
+                        <span>C. 可以融入吃饭、洗澡等基本生活时间，增加日常乐趣</span>
+                    </label>
+                    <label class="flex items-center quiz-option" data-question="q5" data-answer="D">
+                        <input type="radio" name="q5" value="D" class="mr-2">
+                        <span>D. 每次活动时间越长越好，能让老人充分参与</span>
+                    </label>
+                </div>
+                <div class="quiz-explanation hidden mt-3 pl-6 p-3 rounded-lg">
+                    <p class="explanation-text"></p>
+                </div>
+            </div>
+            
+            <!-- 标准答案部分 - 完成所有题目后显示 -->
+            <div id="answerKey" class="mt-8 p-4 bg-gray-50 rounded-lg hidden">
+                <h4 class="font-bold text-primary mb-3 text-center">标准答案汇总</h4>
+                <div class="grid md:grid-cols-2 gap-2">
+                    <div class="flex items-center">
+                        <span class="font-medium w-10">1. </span>
+                        <span class="text-primary font-semibold">B</span>
+                        <span class="ml-2 text-sm text-gray-600">必须有专业人员组织</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="font-medium w-10">2. </span>
+                        <span class="text-primary font-semibold">B</span>
+                        <span class="ml-2 text-sm text-gray-600">集体康乐活动</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="font-medium w-10">3. </span>
+                        <span class="text-primary font-semibold">C</span>
+                        <span class="ml-2 text-sm text-gray-600">制作并品尝传统点心</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="font-medium w-10">4. </span>
+                        <span class="text-primary font-semibold">B</span>
+                        <span class="ml-2 text-sm text-gray-600">老人的需求和能力</span>
+                    </div>
+                    <div class="flex items-center md:col-start-1">
+                        <span class="font-medium w-10">5. </span>
+                        <span class="text-primary font-semibold">C</span>
+                        <span class="ml-2 text-sm text-gray-600">可以融入吃饭、洗澡等基本生活时间，增加日常乐趣</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 测试部分的JavaScript -->
+<script>
+    // 正确答案和解析
+    const quizData = {
+        q1: {
+            correct: "B",
+            explanation: "老年康乐活动的核心特征包括以'找乐趣'为核心、融入日常生活、助力身心健康。并不要求必须由专业人员组织，家属、志愿者等都可以组织开展。"
+        },
+        q2: {
+            correct: "B",
+            explanation: "广场舞是多人共同参与的团体活动，属于集体康乐活动，这类活动有助于促进老年人的社交互动和情感交流。"
+        },
+        q3: {
+            correct: "C",
+            explanation: "制作并品尝传统点心涉及触觉（制作）、味觉（品尝）和嗅觉（食物香气）等多种感官体验，因此属于多感官体验康乐活动。"
+        },
+        q4: {
+            correct: "B",
+            explanation: "老年康乐活动的策划应始终以老人的需求和能力为首要考虑因素，所有活动设计都应围绕满足老人的实际需求、适应其身体和心理能力展开。"
+        },
+        q5: {
+            correct: "C",
+            explanation: "现代老年康乐活动理念强调将乐趣融入日常生活的各个环节，包括吃饭、洗澡等基本生活时间，使老人在平凡生活中也能感受到快乐和意义。"
+        }
+    };
+    
+    // 跟踪已完成的题目数量
+    let completedQuestions = 0;
+    const totalQuestions = Object.keys(quizData).length;
+    
+    // 为每个选项添加点击事件
+    document.querySelectorAll('.quiz-option').forEach(option => {
+        option.addEventListener('click', function() {
+            const question = this.getAttribute('data-question');
+            const selectedAnswer = this.getAttribute('data-answer');
+            const questionData = quizData[question];
+            const isCorrect = selectedAnswer === questionData.correct;
+            
+            // 获取当前题目的解析区域
+            const explanationEl = this.closest('div').nextElementSibling;
+            const explanationText = explanationEl.querySelector('.explanation-text');
+            
+            // 设置解析内容
+            explanationText.textContent = `${isCorrect ? '正确！' : '错误。'} ${questionData.explanation} 正确答案是：${questionData.correct}`;
+            
+            // 设置解析区域样式
+            explanationEl.style.backgroundColor = isCorrect ? '#e6f4ea' : '#fde8e8';
+            explanationEl.style.borderLeft = `4px solid ${isCorrect ? '#38a169' : '#e53e3e'}`;
+            
+            // 显示解析
+            explanationEl.classList.remove('hidden');
+            
+            // 标记已完成的题目
+            if (!this.closest('div').classList.contains('completed')) {
+                this.closest('div').classList.add('completed');
+                completedQuestions++;
+                
+                // 当所有题目都完成后显示答案汇总
+                if (completedQuestions === totalQuestions) {
+                    document.getElementById('answerKey').classList.remove('hidden');
+                }
+            }
+        });
+    });
+</script>
+
+
+    <!-- 页脚 -->
+    <footer class="bg-primary text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold mb-2">老年康乐活动策划组织</h3>
+                    <p class="text-gray-200 text-sm">模块一：初探老年康乐活动</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#intro" class="text-white hover:text-gray-200 transition-custom">情景导入</a>
+                    <a href="#knowledge" class="text-white hover:text-gray-200 transition-custom">知识讲解</a>
+                    <a href="#cases" class="text-white hover:text-gray-200 transition-custom">案例分析</a>
+                    <a href="#quiz" class="text-white hover:text-gray-200 transition-custom">在线测试</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-6 pt-6 text-center text-sm text-gray-300">
+                <p>© 2023 老年康乐活动教育课程 | 以老人为中心，创造有温度的活动体验</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // 移动端菜单切换
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 分类详情切换
+        document.querySelectorAll('[data-category]').forEach(item => {
+            item.addEventListener('click', function() {
+                const category = this.getAttribute('data-category');
+                const details = document.getElementById(`${category}-details`);
+                
+                // 先隐藏所有详情
+                document.querySelectorAll('.category-details').forEach(detail => {
+                    detail.classList.add('hidden');
+                });
+                
+                // 显示当前详情
+                details.classList.toggle('hidden');
+            });
+        });
+
+        // 活动案例数据
+        const activityCases = {
+            collective: {
+                title: "集体康乐活动案例",
+                content: `
+                    <p class="mb-4">集体康乐活动以团体形式开展，适合多人互动，能有效促进老年人的社交连接，减少孤独感。以下是几个典型案例：</p>
+                    
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-primary pl-4">
+                            <h7 class="font-medium">1. 养老机构的每月生日会</h7>
+                            <p class="text-sm text-gray-600 mt-1">每月为当月生日的老人举办集体生日会，大家一起唱生日歌、分享蛋糕，工作人员会准备老人年轻时流行的音乐和游戏，增强参与感和归属感。</p>
+                        </div>
+                        
+                        <div class="border-l-4 border-primary pl-4">
+                            <h7 class="font-medium">2. 社区广场舞活动</h7>
+                            <p class="text-sm text-gray-600 mt-1">由社区组织，每天早晨或傍晚在广场开展，有专业老师指导，动作简单易学，适合不同年龄和身体状况的老人参与，既能锻炼身体，又能增进邻里交流。</p>
+                        </div>
+                        
+                        <div class="border-l-4 border-primary pl-4">
+                            <h7 class="font-medium">3. 集体园艺活动</h7>
+                            <p class="text-sm text-gray-600 mt-1">在养老机构或社区的花园里，组织老人一起种植花草蔬菜，分工合作，从播种到收获全程参与，既能活动身体，又能通过观察植物生长获得成就感。</p>
+                        </div>
+                    </div>
+                `
+            },
+            individual: {
+                title: "个别康乐活动案例",
+                content: `
+                    <p class="mb-4">个别康乐活动针对老人的个体兴趣和身体状况设计，适合单独或小范围参与，能满足老人的个性化需求。以下是几个典型案例：</p>
+                    
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-secondary pl-4">
+                            <h7 class="font-medium">1. 个性化手工艺创作</h7>
+                            <p class="text-sm text-gray-600 mt-1">根据老人的兴趣和手部活动能力，提供绘画、编织、折纸等手工艺材料，老人可以在自己方便的时间进行创作，作品可以展示在房间或公共区域，增强自信心。</p>
+                        </div>
+                        
+                        <div class="border-l-4 border-secondary pl-4">
+                            <h7 class="font-medium">2. 认知症老人的记忆游戏</h7>
+                            <p class="text-sm text-gray-600 mt-1">为认知症老人设计的个性化记忆游戏，如根据老人的人生经历制作照片拼图、熟悉物品配对等，难度根据老人的认知状况调整，有助于延缓认知衰退。</p>
+                        </div>
+                        
+                        <div class="border-l-4 border-secondary pl-4">
+                            <h7 class="font-medium">3. 一对一音乐疗法</h7>
+                            <p class="text-sm text-gray-600 mt-1">针对有特殊需求的老人（如情绪低落、失眠等），由专业人员进行一对一的音乐疗法，通过聆听或演奏适合的音乐，帮助老人放松心情、改善情绪。</p>
+                        </div>
+                    </div>
+                `
+            },
+            daily: {
+                title: "基本生活康乐活动案例",
+                content: `
+                    <p class="mb-4">基本生活康乐活动融入吃饭、洗澡等日常起居，让普通生活环节更有乐趣，提升老人的生活质量。以下是几个典型案例：</p>
+                    
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-accent pl-4">
+                            <h7 class="font-medium">1. 趣味餐饮活动</h7>
+                            <p class="text-sm text-gray-600 mt-1">在日常餐饮中加入乐趣元素，如节日主题餐、怀旧食物品尝会、老人参与简单的食物制作（如包饺子、做馒头）等，让吃饭不再是单调的生理需求。</p>
+                        </div>
+                        
+                        <div class="border-l-4 border-accent pl-4">
+                            <h7 class="font-medium">2. 生活自理能力游戏化</h7>
+                            <p class="text-sm text-gray-600 mt-1">将穿衣、洗漱等日常自理活动转化为小游戏，如比赛谁能自己系好鞋带、谁的衣服穿得整齐等，通过鼓励和小奖励，提升老人的自理积极性。</p>
+                        </div>
+                        
+                        <div class="border-l-4 border-accent pl-4">
+                            <h7 class="font-medium">3. 环境美化活动</h7>
+                            <p class="text-sm text-gray-600 mt-1">组织老人一起布置居住环境，如在房间摆放鲜花、制作手工作品装饰公共区域、季节性装饰等，让老人对生活空间产生归属感和责任感。</p>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        // 活动案例弹窗
+        const modal = document.getElementById('activityModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalContent = document.getElementById('modalContent');
+        const closeModal = document.getElementById('closeModal');
+
+        document.querySelectorAll('.activity-row').forEach(row => {
+            row.addEventListener('click', function() {
+                const type = this.getAttribute('data-type');
+                const caseData = activityCases[type];
+                
+                modalTitle.textContent = caseData.title;
+                modalContent.innerHTML = caseData.content;
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // 防止背景滚动
+            });
+        });
+
+        function hideModal() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = ''; // 恢复背景滚动
+        }
+
+        closeModal.addEventListener('click', hideModal);
+
+        // 点击模态框外部关闭
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                hideModal();
+            }
+        });
+
+        // 在线测试 - 只显示答案功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 正确答案
+            const answers = {
+                q1: "B",
+                q2: "B",
+                q3: "C",
+                q4: "B",
+                q5: "C"
+            };
+            
+            // 获取表单
+            const quizForm = document.getElementById('quizForm');
+            if (quizForm) {
+                quizForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // 显示每个问题的答案
+                    Object.keys(answers).forEach(question => {
+                        // 找到对应的解析区域
+                        const explanationEl = document.querySelector(`input[name="${question}"]`).closest('div').querySelector('.quiz-explanation');
+                        
+                        if (explanationEl) {
+                            // 显示答案
+                            explanationEl.textContent = `正确答案：${answers[question]}`;
+                            explanationEl.classList.remove('hidden');
+                            explanationEl.style.backgroundColor = '#e0f2fe';
+                            explanationEl.style.borderLeft = '4px solid #4361ee';
+                        }
+                    });
+                    
+                    // 显示结果和标准答案
+                    document.getElementById('quizResult').classList.remove('hidden');
+                    document.getElementById('answerKey').classList.remove('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
